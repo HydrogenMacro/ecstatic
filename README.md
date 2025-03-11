@@ -80,6 +80,7 @@ Or you can just copy and paste this into a file manually; it's just [one typescr
 
 ## Performance
 TODO: adding benchmark comparisons
+
 `World` internally uses a 2d array based slot map, so with JIT vectorization and cache locality, it should be fast enough for most applications.
 If you're picking between two libraries, just remember that premature optimization is the root of all evil, so more times than not, just choose whichever library you like the most!
 
