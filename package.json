@@ -1,0 +1,24 @@
+{
+  "name": "ecstatic",
+  "version": "1.0.0",
+  "description": "The simplest and easiest ECS library!",
+  "main": "ecstatic.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HydrogenMacro/ecstatic.git"
+  },
+  "keywords": [
+    "ecs",
+    "entity-component-system",
+    "typescript"
+  ],
+  "author": "hydrogenmacro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HydrogenMacro/ecstatic/issues"
+  },
+  "homepage": "https://github.com/HydrogenMacro/ecstatic#readme"
+}
