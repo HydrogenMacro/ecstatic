@@ -2,7 +2,7 @@
 ecstatic is designed to be an ECS library for JS/TS that priorizes developer experience and the joy of game development above anything else. It is designed to be easy to learn and to use while not compromising on speed and flexibility. In fact, you can learn the whole library in just 5 minutes: just take a look below ⬇️
 ## Kitchen Sink / Guide
 ```ts
-import { World, Component } from "ecstatic";
+import { World, Component } from "@hydrogenmacro/ecstatic";
 
 // A world stores all of your entities and components.
 const world = new World();
@@ -70,11 +70,11 @@ world.spawn([...ThingBundle(10, 10), Name({ name: "Sam" }))];
 ```
 ## Installation
 ```sh
-npm i ecstatic
+npm i @hydrogenmacro/ecstatic
 ```
 You can also use this in the browser easily:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/ecstatic@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@hydrogenmacro/ecstatic/ecstatic.min.js"></script>
 ```
 Or you can just copy and paste this into a file manually; it's just [one typescript file](ecstatic.ts)!
 

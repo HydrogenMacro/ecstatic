@@ -1,5 +1,5 @@
 {
-  "name": "ecstatic",
+  "name": "@hydrogenmacro/ecstatic",
   "version": "1.0.0",
   "description": "The simplest and easiest ECS library!",
   "main": "ecstatic.ts",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/HydrogenMacro/ecstatic/issues"
   },
-  "homepage": "https://github.com/HydrogenMacro/ecstatic#readme"
+  "homepage": "https://github.com/HydrogenMacro/ecstatic#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
