@@ -73,8 +73,8 @@ world.spawn([...ThingBundle(10, 10), Name({ name: "Sam" }))];
 npm i @hydrogenmacro/ecstatic
 ```
 You can also use this in the browser easily:
-```html
-<script src="https://cdn.jsdelivr.net/npm/@hydrogenmacro/ecstatic/ecstatic.min.js"></script>
+```js
+import { World, Component } from "https://cdn.jsdelivr.net/npm/@hydrogenmacro/ecstatic/ecstatic.js/+esm";
 ```
 Or you can just copy and paste this into a file manually; it's just [one typescript file](ecstatic.ts)!
 
