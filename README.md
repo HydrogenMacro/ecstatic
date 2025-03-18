@@ -1,5 +1,5 @@
 # ecstatic
-ecstatic is designed to be an ECS library for JS/TS that priorizes developer experience and the joy of game development above anything else. It is designed to be easy to learn and to use while not compromising on speed and flexibility. In fact, you can learn the whole library in just 5 minutes: just take a look below ⬇️
+Born from the frustration of the verbosity and the inconvenience of conventional ECS libraries, ecstatic is designed to be an ECS library for JS/TS that priorizes developer experience and the joy of game development above anything else. It is designed to be easy to learn and to use while not compromising on speed and flexibility. In fact, you can learn the whole library in just 5 minutes: just take a look below ⬇️
 ## Kitchen Sink / Guide
 ```ts
 import { World, Component } from "@hydrogenmacro/ecstatic";
