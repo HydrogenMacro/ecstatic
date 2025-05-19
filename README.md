@@ -1,6 +1,9 @@
 # ecstatic
+
 ecstatic is designed to be an ECS library for JS/TS that priorizes developer experience and the joy of game development above anything else. It is designed to be easy to learn and to use while not compromising on speed and flexibility. In fact, you can learn the whole library in just 5 minutes: just take a look below ⬇️
+
 ## Kitchen Sink / Guide
+
 ```ts
 import { World, Component } from "@hydrogenmacro/ecstatic";
 
@@ -12,9 +15,10 @@ const world = new World();
 const Name: ComponentConstructor = Component<{ name: string }>();
 // You can pass a default as well:
 const Position = Component<{ x: number, y: number }>({ x: 0, y: 0 });
-// Or you can pass nothing at all as well, if you just want a marker component for things like singleton entites:
-const ThingMarker = Component();
-const Rotation = Component<{ rot: number }>({ rot: 0 });
+// You don't have to specify the generic, typescript can infer it for you
+const Rotation = Component({ rot: 0 }); // Component<{ rot: number }>
+// Markers, or components whose sole purpose is for their existence, can just be passed an empty object
+const ThingMarker = Component({});
 
 // To spawn entities, World.spawn can be used.
 // To create the components, simply just call the constructors declared above!
@@ -22,7 +26,7 @@ const entity1: EntityRef = world.spawn([
   Name({ name: "Bob" }),
   // remember, we passed a default when making the Position component above,
   // so we don't *need* to specify anything here:
-  Position(),  
+  Position(),
 ]);
 
 // Note that spawning returns an EntityRef
@@ -34,8 +38,8 @@ const entity2: EntityRef = world.spawn([
 
 // Now, to query the entities from the world, you can just pass the *constructors* of the components to World.query:
 for (const [position, name] of
-  world.query([Position, Name]) // don't call `Position()` nor `Name()`, just pass the actual functions themselves! 
-) { 
+  world.query([Position, Name]) // don't call `Position()` nor `Name()`, just pass the actual constructors themselves!
+) {
   // You can think of position and name as { x: number, y: number } and { name: string } respectively;
   // they're basically just objects
   position.x += 5;
@@ -68,26 +72,35 @@ const ThingBundle = (x: number, y: number) => [Position({ x, y }), Rotation({ ro
 world.spawn([...ThingBundle(10, 10), Name({ name: "Sam" }))];
 
 ```
+
 ## Installation
+
 ```sh
 npm i @hydrogenmacro/ecstatic
 ```
+
 You can also use this in the browser easily:
+
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@hydrogenmacro/ecstatic/ecstatic.min.js"></script>
 ```
+
 Or you can just copy and paste this into a file manually; it's just [one typescript file](ecstatic.ts)!
 
 ## Performance
+
 TODO: adding benchmark comparisons
 `World` internally uses a 2d array based slot map, so with JIT vectorization and cache locality, it should be fast enough for most applications.
 If you're picking between two libraries, just remember that premature optimization is the root of all evil, so more times than not, just choose whichever library you like the most!
 
 ## Todo
- - [ ] Archetypes
- - [ ] EntityRef.has()
- - [ ] Inline docs
- - [ ] Serialization
+
+- [ ] Archetypes
+- [x] EntityRef.has()
+- [x] Inline docs
+- [ ] Serialization
+- [ ] Component Add/Remove/Change Events
 
 ## Credits
+
 The API and concepts were inspired by the Rust libraries [hecs](https://github.com/Ralith/hecs) and [bevy_ecs](https://docs.rs/bevy_ecs/latest/bevy_ecs/).

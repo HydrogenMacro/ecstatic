@@ -1,27 +1,35 @@
 {
-  "name": "@hydrogenmacro/ecstatic",
-  "version": "1.0.0",
-  "description": "The simplest and easiest ECS library!",
-  "main": "ecstatic.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HydrogenMacro/ecstatic.git"
-  },
-  "keywords": [
-    "ecs",
-    "entity-component-system",
-    "typescript"
-  ],
-  "author": "hydrogenmacro",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HydrogenMacro/ecstatic/issues"
-  },
-  "homepage": "https://github.com/HydrogenMacro/ecstatic#readme",
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@hydrogenmacro/ecstatic",
+    "version": "1.0.0",
+    "description": "The simplest and easiest ECS library!",
+    "main": "ecstatic.ts",
+    "type": "module",
+    "scripts": {
+        "test": "jest",
+        "bench": "",
+        "format": "prettier --write ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HydrogenMacro/ecstatic.git"
+    },
+    "keywords": [
+        "ecs",
+        "entity-component-system",
+        "typescript"
+    ],
+    "author": "hydrogenmacro",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/HydrogenMacro/ecstatic/issues"
+    },
+    "homepage": "https://github.com/HydrogenMacro/ecstatic#readme",
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.14",
+        "jest": "^29.7.0",
+        "prettier": "^3.5.3"
+    }
 }
